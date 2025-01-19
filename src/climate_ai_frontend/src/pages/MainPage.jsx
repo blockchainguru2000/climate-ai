@@ -12,7 +12,7 @@ const MainPage = () => {
   });
 
   const genAi = new GoogleGenerativeAI(
-    "AIzaSyDuCHANUicaCllLBpG9ZA_LAj5IqbrOt5g"
+    process .env.GOOGLE_API_KEY
   );
 
   //get users history
