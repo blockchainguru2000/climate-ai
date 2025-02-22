@@ -1,0 +1,37 @@
+{
+  "canisters": {
+    "climate_ai_backend": {
+      "main": "src/climate_ai_backend/main.mo",
+      "type": "motoko"
+    },
+    "climate_ai_frontend": {
+      "dependencies": [
+        "climate_ai_backend"
+      ],
+      "source": [
+        "src/climate_ai_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "climate_ai_frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
